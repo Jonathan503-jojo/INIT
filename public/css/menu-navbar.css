@@ -51,14 +51,14 @@
 ul {
   list-style: none;
   /* Color highlighting when pressed on mobile devices */
-  /*-webkit-tap-highlight-color: transparent;*/
+  -webkit-tap-highlight-color: transparent;
 }
 
 a {
   text-decoration: none;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+ 
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -172,14 +172,14 @@ a {
   
 }
 
-/* Show menu */
+/* menu */
 .show-menu {
   opacity: 1;
   top: 3.5rem;
   pointer-events: initial;
 }
 
-/* Show icon */
+/* icon */
 .show-icon .nav__burger {
   opacity: 0;
   transform: rotate(90deg);
@@ -230,14 +230,14 @@ a {
   transition: max-height .4s ease-out;
 }
 
-/* Show dropdown menu & submenu */
+/* Montrer le dropdown menu */
 .dropdown__item:hover .dropdown__menu, 
 .dropdown__subitem:hover > .dropdown__submenu {
   max-height: 1000px;
   transition: max-height .4s ease-in;
 }
 
-/* Rotate dropdown icon */
+/* rotaion du dropdown icon */
 .dropdown__item:hover .dropdown__arrow {
   transform: rotate(180deg);
 }
@@ -252,7 +252,7 @@ a {
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
+/* Pour small devices */
 @media screen and (max-width: 340px) {
   .container {
     margin-inline: 1rem;
@@ -263,7 +263,7 @@ a {
   }
 }
 
-/* For large devices */
+/* pour large device */
 @media screen and (min-width: 1118px) {
   .container {
     margin-inline: auto;
@@ -332,16 +332,23 @@ a {
     transition: top .3s;
   }
 
-  /* Show dropdown submenu */
+ 
   .dropdown__subitem:hover > .dropdown__submenu {
     opacity: 1;
     top: 0;
     pointer-events: initial;
     transition: top .3s;
   }
-  .content {
-    padding-top: 60px; /* Hauteur de la navbar pour éviter le chevauchement */
-    height: 2000px; /* Juste pour le défilement */
+  .slo {
+    padding-top: 100px; /* Hauteur de la navbar pour éviter le chevauchement */
+    background: url('background.jpg');
+    height: 6000px;
+}
+.slo h1{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  align-content: auto;
 }
 }
 

@@ -68,7 +68,7 @@
                   <li><a href="#" class="nav__link">Careers</a></li>
                </ul>
             </div>
-            <img src="img/logo MGH.jpg" class="image">
+            <img src="img/logo MGH.jpg" class="image" >
          </nav>
       </header>
 
@@ -76,7 +76,7 @@
       <script src="{{ url('js/main.js')}}"></script>
    </div>
    </body>
-   <div class="content">
-
+   <div class="slo" style="background: url('background.jpg')">
+         <h1>MADAGASCAR GROUND HANDLING</h1>
    </div>
 </html>
