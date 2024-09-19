@@ -29,3 +29,33 @@ window.addEventListener('scroll', function() {
     }
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Pour ne pas avoir un nombre négatif
 });
+
+const carousel = document.getElementById('carousel');
+const slides = document.querySelectorAll('.carousel-slide');
+const dots = document.querySelectorAll('.dot');
+let currentIndex = 0;
+let interval = setInterval(nextSlide, 4000);
+
+function updateCarousel() {
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+}
+
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
+}
+
+function currentSlide(index) {
+    currentIndex = index;
+    updateCarousel();
+    clearInterval(interval);
+    interval = setInterval(nextSlide, 4000);
+}
