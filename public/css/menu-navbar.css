@@ -1,6 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -399,23 +399,67 @@ a {
 }
 .slo h1{
   color: black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "DM Sans", sans-serif;
   text-align: center;
   align-content: auto;
   transition: 0.5s;
+  font-size: 50px;
 }
 .slo h4{
   color: black;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "DM Sans", sans-serif;
   text-align: center;
   align-content: auto;
   transition: 0.5s;
+  font-size: 30px;
+  font-style: normal;
 }
+
+ 
 .slo h1:hover{
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
 }
 .slo h4:hover{
-  letter-spacing: 2px;
+  letter-spacing: 0.5px;
+}
+/* Ajustements pour les grands écrans */
+@media screen and (min-width: 1200px) {
+  .slo h1 {
+      font-size: 50px;
+  }
+  .slo h4 {
+      font-size: 30px;
+  }
+}
+
+/* Ajustements pour les écrans moyens */
+@media screen and (max-width: 992px) {
+  .slo h1 {
+      font-size: 4vw;
+  }
+  .slo h4 {
+      font-size: 2.5vw;
+  }
+}
+
+/* Ajustements pour les petits écrans */
+@media screen and (max-width: 768px) {
+  .slo h1 {
+      font-size: 5vw;
+  }
+  .slo h4 {
+      font-size: 3vw;
+  }
+}
+
+/* Ajustements pour les très petits écrans */
+@media screen and (max-width: 576px) {
+  .slo h1 {
+      font-size: 6vw;
+  }
+  .slo h4 {
+      font-size: 4vw;
+  }
 }
 
 
@@ -434,22 +478,34 @@ a {
 
 .carousel-slide {
   min-width: 100%;
-  height: 400px;
+  height: 500px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.carousel-text {
+.carousel-text h2{
   position: absolute;
+  font-family: "DM Sans", sans-serif;
+  font-size: 60px;
+  align-self: auto;
   padding-top: 0%;
   bottom: 50%;
   left: 10%;
   color: white;
-  font-size: 24px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent; 
+}
+
+.carousel-text p{
+  position: absolute;
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
   
-  
+  padding-top: 0%;
+  bottom: 50%;
+  left: 10%;
+  color: white;
+  background-color: transparent; 
 }
 
 /* Buttons */
@@ -495,9 +551,244 @@ a {
 .dot.active {
   background-color: #717171;
 }
+ 
+.mid h1,
+.map h1,
+.stay-up h1{
+  font-family: "DM Sans", sans-serif;
+  font-size: 45px;
+}
+.mid h5,
+.map h5,
+.stay-up h5{
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  color: red;
+}
 
 
+#custom-container {
+  height: 60vh;
+  top: auto;
+  display: grid;
+  place-items: center;
+  
+}
+
+#custom-slider-wrapper {
+  height: 300px;
+  width: 95vw;
+  max-width: 1400px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+#custom-slider-wrapper .custom-btn {
+  position: absolute;
+  top: calc(50% - 30px);
+  height: 15px;
+  width: 15px;
+  border-left: 8px solid #696969;
+  border-top: 8px solid #696969;
+  cursor: pointer;
+}
+
+#custom-slider-wrapper .custom-btn:hover {
+  transform: scale(1.2);
+}
+
+#custom-slider-wrapper .custom-btn.inactive {
+  border-color: #282828;
+}
+
+#custom-slider-wrapper .custom-btn:first-of-type {
+  transform: rotate(-45deg);
+  left: 10px;
+}
+
+#custom-slider-wrapper .custom-btn:last-of-type {
+  transform: rotate(135deg);
+  right: 10px;
+}
+
+#custom-slider-wrapper #custom-slider {
+  display: flex;
+  width: 1000%;
+  height: 100%;
+  transition: all .5s;
+}
+
+#custom-slider-wrapper #custom-slider .custom-slide {
+  position: relative;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.custom-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+}
+
+.custom-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.custom-overlay h2,p {
+  font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+.custom-overlay .learn-more {
+  margin-top: 10px;
+  opacity: 0;
+  font-size: 14px;
+  color: #ffeb3b;
+  transition: opacity 0.3s ease;
+}
+
+.custom-slide:hover .learn-more {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 1100px) {
+  #custom-slider-wrapper #custom-slider .custom-slide {
+      width: calc(2.5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  #custom-slider-wrapper #custom-slider .custom-slide {
+      width: calc(3.3333333% - 20px);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #custom-slider-wrapper #custom-slider .custom-slide {
+      width: calc(5% - 20px);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  #custom-slider-wrapper #custom-slider .custom-slide {
+      width: calc(10% - 20px);
+  }
+}
+
+.partenaires h2{
+  text-align: center;
+  font-family: "DM Sans", sans-serif;
+  color: rgb(0, 110, 255);
+  font-size: 50px;
+}
+.partenaires .txt{
+  background-color: rgb(35, 70, 77);
+  align-content: center;
+  margin: auto;
+  border-radius: 20px;
+  height: 200px;
+  width: 80%;
+
+}
+
+.partenaires p{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
+.container-partenaires {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px; /* Espace entre les divs */
+}
+
+.box {
+  flex: 1; /* Les divs prennent une largeur égale */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  text-align: center; /* Centre le texte dans chaque div */
+}
+
+.box h1 {
+  margin-bottom: 10px;
+}
  
 
+.carousel-section {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.carousel-title {
+  font-size: 24px;
+  background-color: #333;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
 
+.carou-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-row {
+  display: flex;
+  width: max-content;
+  animation: scroll 10s linear infinite;
+}
+
+.row1 {
+  animation-direction: normal; /* Défilement vers la droite */
+}
+
+.row2 {
+  animation-direction: reverse; /* Défilement vers la gauche */
+}
+
+.carousel-row img {
+  width: 200px;
+  height: 100px;  
+  object-fit: contain; /* Assure que l'image est visible en entier sans déformation */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Animation infinie qui fait défiler les images */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-160px * 8)); /* Calcul basé sur la largeur d'une image */
+  }
+}
+
+.carou-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Pour rendre le design plus agréable */
+}
