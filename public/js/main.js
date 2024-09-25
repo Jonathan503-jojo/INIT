@@ -1,3 +1,10 @@
+// Quand la page est complètement chargée
+window.addEventListener('load', function() {
+    // Ajouter la classe "loaded" au body pour cacher l'écran de chargement
+    document.body.classList.add('loaded');
+});
+
+
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) =>{
    const toggle = document.getElementById(toggleId),
@@ -197,43 +204,44 @@ L.geoJSON(antananarivoRegion, {
     }
 }).addTo(map);
 
-
 const row1 = document.querySelector('.row1');
-    const row2 = document.querySelector('.row2');
-    let isRow1Paused = false;
-    let isRow2Paused = false;
+const row2 = document.querySelector('.row2');
 
-    // Fonction pour démarrer l'animation
-    function startAnimation() {
-      if (!isRow1Paused) {
-        row1.style.animationPlayState = 'running';
-      }
-      if (!isRow2Paused) {
-        row2.style.animationPlayState = 'running';
-      }
-    }
+// Fonction pour cloner les images pour un effet infini
+const cloneImages = (row) => {
+  const rowWidth = row.scrollWidth; // Largeur de la ligne d'images
+  const containerWidth = document.querySelector('.carou-container').offsetWidth; // Largeur du conteneur visible
 
-    // Fonction pour arrêter l'animation
-    function stopAnimation() {
-      row1.style.animationPlayState = 'paused';
-      row2.style.animationPlayState = 'paused';
-    }
+  let totalWidth = rowWidth;
 
-    // Fonction pour arrêter l'animation au clic sur une image dans la première ligne
-    document.querySelectorAll('.row1 img').forEach(image => {
-      image.addEventListener('click', () => {
-        isRow1Paused = !isRow1Paused; // Bascule entre pause et lecture
-        row1.style.animationPlayState = isRow1Paused ? 'paused' : 'running';
-      });
+  // Tant que la largeur des images est inférieure à deux fois la largeur du conteneur, on clone
+  while (totalWidth < containerWidth * 2) {
+    const images = Array.from(row.children);
+    images.forEach(image => {
+      const clone = image.cloneNode(true);
+      row.appendChild(clone);
     });
+    totalWidth = row.scrollWidth; // Recalculer la largeur totale après chaque duplication
+  }
+};
 
-    // Fonction pour arrêter l'animation au clic sur une image dans la deuxième ligne
-    document.querySelectorAll('.row2 img').forEach(image => {
-      image.addEventListener('click', () => {
-        isRow2Paused = !isRow2Paused; // Bascule entre pause et lecture
-        row2.style.animationPlayState = isRow2Paused ? 'paused' : 'running';
-      });
-    });
+cloneImages(row1);
+cloneImages(row2);
 
-    // Démarrer l'animation par défaut, même si la souris passe dessus
-    startAnimation();
+// Pause/reprise au clic
+const toggleAnimation = (row, isPaused) => {
+  row.style.animationPlayState = isPaused ? 'paused' : 'running';
+};
+
+document.querySelectorAll('.row1 img').forEach(image => {
+  image.addEventListener('click', () => {
+    row1.style.animationPlayState = row1.style.animationPlayState === 'paused' ? 'running' : 'paused';
+  });
+});
+
+document.querySelectorAll('.row2 img').forEach(image => {
+  image.addEventListener('click', () => {
+    row2.style.animationPlayState = row2.style.animationPlayState === 'paused' ? 'running' : 'paused';
+  });
+});
+

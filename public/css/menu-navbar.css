@@ -26,6 +26,38 @@
   --z-tooltip: 10;
   --z-fixed: 100;
 }
+/* Style du conteneur de chargement */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white; /* Couleur de fond pendant le chargement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Mettre l'élément en avant-plan */
+}
+
+/* Style de l'icône d'avion */
+#loading-icon {
+    font-size: 100px; /* Taille de l'icône d'avion */
+    color: #007bff; /* Couleur de l'avion */
+    animation: spin 2s linear infinite; /* Animation de rotation */
+}
+
+/* Animation de rotation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Masquer l'écran de chargement une fois la page chargée */
+body.loaded #loading-screen {
+    display: none;
+}
+
 
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1024px) {
@@ -382,9 +414,18 @@ a {
     pointer-events: initial;
     transition: top .3s;
   }
+  .dropdown__item:hover .dropdown__menu .propos{
+    border-radius: 50px;
+    margin-top: 5px;
+    background-color: rgb(215, 250, 241);
+    color: black;
+    left: 2%;
+    height: 90%;
+    width: 90%;
+    position: fixed;
+  }
 
- 
-  .dropdown__subitem:hover > .dropdown__submenu {
+.dropdown__subitem:hover > .dropdown__submenu {
     opacity: 1;
     top: 0;
     pointer-events: initial;
@@ -486,6 +527,7 @@ a {
 
 .carousel-text h2{
   position: absolute;
+  padding: auto;
   font-family: "DM Sans", sans-serif;
   font-size: 60px;
   align-self: auto;
@@ -692,7 +734,7 @@ a {
   font-size: 50px;
 }
 .partenaires .txt{
-  background-color: rgb(35, 70, 77);
+  background-color: rgb(235, 235, 235);
   align-content: center;
   margin: auto;
   border-radius: 20px;
@@ -703,14 +745,12 @@ a {
 
 .partenaires p{
   position: relative;
-  z-index: 1;
-  color: #fff;
-  text-align: center;
+  color: black;
+  text-align: auto;
   font-size: 20px;
   font-family: "DM Sans", sans-serif;
   font-weight: 500;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 50px;
 }
 
 .container-partenaires {
@@ -731,8 +771,6 @@ a {
 .box h1 {
   margin-bottom: 10px;
 }
- 
-
 .carousel-section {
   width: 100%;
   margin: auto;
@@ -741,11 +779,11 @@ a {
 }
 
 .carousel-title {
+  font-family: "DM Sans", sans-serif;
   font-size: 24px;
-  background-color: #333;
   font-weight: bold;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: black;
 }
 
 .carou-container {
@@ -756,8 +794,8 @@ a {
 
 .carousel-row {
   display: flex;
-  width: max-content;
-  animation: scroll 10s linear infinite;
+  animation: scroll 40s linear infinite; /* Animation plus lente et fluide sur 40 secondes */
+  width: calc(200px * 24); /* La largeur est calculée pour inclure toutes les images (12 originales et 12 clones) */
 }
 
 .row1 {
@@ -770,19 +808,19 @@ a {
 
 .carousel-row img {
   width: 200px;
-  height: 100px;  
-  object-fit: contain; /* Assure que l'image est visible en entier sans déformation */
+  height: 100px;
+  object-fit: contain;
   margin-right: 10px;
   cursor: pointer;
 }
 
-/* Animation infinie qui fait défiler les images */
+/* Animation infinie sans coupure */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-160px * 8)); /* Calcul basé sur la largeur d'une image */
+    transform: translateX(calc(-200px * 12)); /* Défilement sur la largeur des 12 images originales */
   }
 }
 
@@ -790,5 +828,133 @@ a {
   background-color: white;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Pour rendre le design plus agréable */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+footer {
+  background: #343434;
+  padding-top: 50px;
+  width: 100%; /* S'assure que le footer occupe toute la largeur de l'écran */
+}
+
+.footer {
+  width: 90%; /* Utilisation d'un pourcentage pour une meilleure flexibilité */
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permet de gérer le passage des éléments à la ligne sur petits écrans */
+}
+
+.footer-content {
+  width: 100%; /* Largeur par défaut pour petits écrans */
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.footer-content p,
+.footer-content ul {
+  text-align: center;
+}
+
+.list {
+  padding: 0;
+}
+
+.list li {
+  list-style-type: none;
+  padding: 7px;
+  position: relative;
+}
+
+.list li::before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background: #f18930;
+  transition-duration: .5s;
+}
+
+.list li:hover::before {
+  width: 70px;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 0;
+}
+
+.social-icons li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f18930;
+}
+
+.social-icons i:hover {
+  color: #f18930;
+}
+
+.bottom-bar {
+  background: #30f1c7;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 50px;
+}
+
+.bottom-bar p {
+  color: #343434;
+  margin: 0;
+  font-size: 16px;
+  padding: 7px;
+}
+
+.footer * {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .footer-content {
+    width: 33%; /* Ajustement pour écrans moyens */
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    width: 100%; /* Occupation de toute la largeur pour écrans plus petits */
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .bottom-bar p {
+    font-size: 14px;
+  }
 }
