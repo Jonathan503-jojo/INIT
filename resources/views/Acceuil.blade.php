@@ -38,7 +38,7 @@
                   <!--=============== DROPDOWN 1 - A propos ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        <a href="/propos">A propos</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="{{ url('/propos')}}">A propos</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <div class="propos">

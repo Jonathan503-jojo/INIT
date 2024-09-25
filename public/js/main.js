@@ -155,7 +155,8 @@ var villes = [
     { name: "Diego", coords: [-12.2765, 49.2915], content: "<h2>Aéroport Diego</h2>Inona ny vaovao<br><a href='#'>En savoir plus</a>" },
     { name: "Nosy Be", coords: [-13.329, 48.247], content: "<h2>Aéroport Nosy Be</h2>Inona ny vaovao<br><a href='#'>En savoir plus</a>" },
     { name: "Fort Dauphin", coords: [-25.031, 46.999], content: "<h2>Aéroport Fort Dauphin</h2>Inona ny vaovao<br><a href='#'>En savoir plus</a>" },
-    { name: "Antananarivo", coords: [-18.8792, 47.5079], content: "<h2>MGH à Antananarivo</h2>Inona ny vaovao<br><a href='#'>En savoir plus</a>" }
+    // Modifier les coordonnées et le contenu pour Ivato, Antananarivo
+    { name: "Ivato Antananarivo", coords: [-18.800826, 47.479144], content: "<h2>Aéroport Ivato Antananarivo</h2>Inona ny vaovao<br><a href='#'>En savoir plus</a>" }
 ];
 
 // Ajout des marqueurs et popup pour chaque ville
@@ -174,35 +175,8 @@ map.on('click', function(e) {
     map.closePopup();  // Fermer les popups lorsqu'on clique sur la carte ailleurs
 });
 
-// GeoJSON pour la région d'Antananarivo (exemple, il vous faudra le GeoJSON réel)
-var antananarivoRegion = {
-    "type": "FeatureCollection",
-    "features": [
-        {
-            "type": "Feature",
-            "properties": {},
-            "geometry": {
-                "type": "Polygon",
-                "coordinates": [
-                    [
-                        [47.3799, -18.875],
-                        [47.6368, -18.875],
-                        [47.6368, -18.5901],
-                        [47.3799, -18.5901],
-                        [47.3799, -18.875]
-                    ]
-                ]
-            }
-        }
-    ]
-};
+// Le GeoJSON a été retiré pour supprimer le carré.
 
-// Ajouter le GeoJSON à la carte avec une couleur spécifique
-L.geoJSON(antananarivoRegion, {
-    style: function(feature) {
-        return { color: "blue", fillColor: "lightblue", fillOpacity: 0.5 };
-    }
-}).addTo(map);
 
 const row1 = document.querySelector('.row1');
 const row2 = document.querySelector('.row2');

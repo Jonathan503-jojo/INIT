@@ -367,7 +367,8 @@ a {
     display: flex;
     column-gap: 3rem;
   }
-  .nav__link {
+  .nav__link,
+  .link {
     align-content: center;
     height: 100%;
     padding: 0;
