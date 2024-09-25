@@ -77,7 +77,7 @@ body.loaded #loading-screen {
 .tete {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  background-color: violet;
+   
 }
 
 ul {
@@ -122,6 +122,9 @@ a {
 .nav__close {
   color: var(--black-color);
 }
+ .nav__link a{
+  color: black;
+ }
 
 .nav__data {
   position: relative;
@@ -365,15 +368,17 @@ a {
     column-gap: 3rem;
   }
   .nav__link {
+    align-content: center;
     height: 100%;
     padding: 0;
     justify-content: initial;
     column-gap: .25rem;
   }
-  .nav__link:hover {
-    background-color: transparent;
-    color: rgb(0, 132, 255);
+  .nav__link a:hover,
+  .nav__link i:hover{
+    color: #007bff;
   }
+   
 
   .dropdown__item, 
   .dropdown__subitem {

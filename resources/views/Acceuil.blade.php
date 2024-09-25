@@ -38,7 +38,7 @@
                   <!--=============== DROPDOWN 1 - A propos ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        A propos <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="/propos">A propos</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <div class="propos">
@@ -52,7 +52,7 @@
                   <!--=============== DROPDOWN 2 - Services ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        Services <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="/services" class="lien">Services</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <h3>jvsdjndjnvvn</h3>
@@ -62,7 +62,7 @@
                   <!--=============== DROPDOWN 3 - Rédirection ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        Rédirection <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="/redirection" class="lien">Rédirection</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <h3>jvsdjndjnvvn</h3>
@@ -72,7 +72,7 @@
                   <!--=============== DROPDOWN 4 - Partenaires ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        Partenaires <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="/partenaires" class="lien">Partenaires</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <h3>jvsdjndjnvvn</h3>
@@ -82,7 +82,7 @@
                   <!--=============== DROPDOWN 5 - Contact ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        Contact <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="/contact" class="lien">Contact</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
                         <h3>jvsdjndjnvvn</h3>
@@ -90,7 +90,7 @@
                   </li>
 
                   <!-- Lien direct - Careers -->
-                  <li><a href="#" class="nav__link">Carrières</a></li>
+                  <li><a href="/propos" class="lien">Cariere</a></li>
                </ul>
             </div>
             <!-- Logo MGH -->
@@ -312,8 +312,8 @@
           <div class="footer-content">
               <h3>Liens rapides</h3>
                <ul class="list">
-                  <li><a href="{{ url('/home')}}">Acceuil</a></li>
-                  <li><a href="">A propos</a></li>
+                  <li><a href="{{ url('/Acceuil')}}">Acceuil</a></li>
+                  <li><a href="{{ url('/propos')}}">A propos</a></li>
                   <li><a href="">Services</a></li>
                   <li><a href="">Rediréction</a></li>
                   <li><a href="">Carrières</a></li>
