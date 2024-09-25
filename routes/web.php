@@ -17,6 +17,10 @@ Route::get('/propos', function () {
     return view('propos');
 });
 
+Route::get('/services', function () {
+    
+    return view('services');
+});
  
 
 

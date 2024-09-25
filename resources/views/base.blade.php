@@ -42,9 +42,9 @@
                      </div>
                      <ul class="dropdown__menu">
                         <div class="propos">
-                           <h3>Salut</h3>
+                           <h3>A propos</h3>
                            <br>
-                           <p>voici un lien cliquable <a href="#">ICI</a></p>
+                           <p><a href="#"></a></p>
                         </div>
                      </ul>
                   </li>
@@ -52,10 +52,14 @@
                   <!--=============== DROPDOWN 2 - Services ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
-                        <a href="/services" class="lien">Services</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                        <a href="{{ url('/services')}}" class="lien">Services</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
-                        <h3>jvsdjndjnvvn</h3>
+                        <div class="propos">
+                           <h3>Services</h3>
+                           <br>
+                           <p><a href="#"></a></p>
+                        </div>
                      </ul>
                   </li>
 
@@ -65,7 +69,11 @@
                         <a href="/redirection" class="lien">Rédirection</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
-                        <h3>jvsdjndjnvvn</h3>
+                        <div class="propos">
+                           <h3>Rédirection</h3>
+                           <br>
+                           <p><a href="#"></a></p>
+                        </div>
                      </ul>
                   </li>
 
@@ -75,7 +83,11 @@
                         <a href="/partenaires" class="lien">Partenaires</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
-                        <h3>jvsdjndjnvvn</h3>
+                        <div class="propos">
+                           <h3>Partenaires</h3>
+                           <br>
+                           <p><a href="#"></a></p>
+                        </div>
                      </ul>
                   </li>
 
@@ -85,12 +97,16 @@
                         <a href="/contact" class="lien">Contact</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
                      </div>
                      <ul class="dropdown__menu">
-                        <h3>jvsdjndjnvvn</h3>
+                        <div class="propos">
+                           <h3>Contact</h3>
+                           <br>
+                           <p><a href="#"></a></p>
+                        </div>
                      </ul>
                   </li>
 
                   <!-- Lien direct - Careers -->
-                  <li><a href="/propos" class="lien">Cariere</a></li>
+                  <li><a href="/propos" class="nav__link">Cariere</a></li>
                </ul>
             </div>
             <!-- Logo MGH -->
