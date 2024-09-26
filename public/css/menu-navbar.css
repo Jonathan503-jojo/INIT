@@ -1,6 +1,8 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -445,7 +447,7 @@ a {
 }
 .slo h1{
   color: black;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
   text-align: center;
   align-content: auto;
   transition: 0.5s;
@@ -453,7 +455,7 @@ a {
 }
 .slo h4{
   color: black;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Kanit", sans-serif;
   text-align: center;
   align-content: auto;
   transition: 0.5s;
@@ -601,17 +603,18 @@ a {
  
 .mid h1,
 .map h1,
-.stay-up h1{
+.actu h1{
   font-family: "DM Sans", sans-serif;
   font-size: 45px;
 }
 .mid h5,
 .map h5,
-.stay-up h5{
+.actu h5{
   font-family: "DM Sans", sans-serif;
   font-size: 20px;
   color: red;
 }
+
 
 
 #custom-container {
@@ -678,8 +681,9 @@ a {
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 2px 2px 4px 2px white, -2px -2px 4px 2px white;
+  transition: 0.5s;
 }
-
+ 
 .custom-overlay {
   position: absolute;
   bottom: 20px;
@@ -690,22 +694,31 @@ a {
   border-radius: 5px;
   transition: all 0.3s ease;
 }
+.custom-overlay:hover {
+   cursor: pointer;
+   letter-spacing: 2px;
+}
 
-.custom-overlay h2,p {
+.custom-overlay p {
   font-family: "DM Sans", sans-serif;
+  margin: 0;
+}
+
+.custom-overlay h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 30px;
   margin: 0;
 }
 
 .custom-overlay .learn-more {
   margin-top: 10px;
-  opacity: 0;
-  font-size: 14px;
-  color: #ffeb3b;
-  transition: opacity 0.3s ease;
+  color: white;
+  transition: 0.5s
 }
 
-.custom-slide:hover .learn-more {
-  opacity: 1;
+.custom-slide:hover   {
+
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -836,11 +849,9 @@ a {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
 footer {
   background: #343434;
+  font-family: 'Roboto', sans-serif;
   padding-top: 50px;
   width: 100%; /* S'assure que le footer occupe toute la largeur de l'écran */
 }
@@ -860,14 +871,17 @@ footer {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 70px;
   margin-bottom: 15px;
   text-align: center;
+   
 }
 
 .footer-content p,
-.footer-content ul {
+.footer-content ul{
   text-align: center;
+  font-family: "Roboto Slab", serif;
+  
 }
 
 .list {
@@ -935,12 +949,13 @@ a:hover {
   margin: 0;
   font-size: 16px;
   padding: 7px;
+  font-family: "Roboto Slab", serif;
 }
 
 .footer * {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: white;
+  font-family: "Roboto Slab", serif;
 }
 
 /* Media Queries */
@@ -963,3 +978,174 @@ a:hover {
     font-size: 14px;
   }
 }
+/* Style de base pour le menu flottant */
+.floating-menu {
+    position: fixed;
+    bottom: 90px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.menu-item {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    width: 50px; /* Taille initiale */
+    overflow: hidden; /* Cacher le texte au début */
+    white-space: nowrap; /* Eviter le saut de ligne */
+}
+ 
+.menu-item:hover {
+    width: 200px; /* Agrandir lors du survol */
+    font-weight: 400;
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid red;
+}
+
+.icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.text {
+    display: none;
+}
+
+.menu-item:hover .text {
+    display: inline-block; /* Afficher le texte au survol */
+}
+
+/* Styles spécifiques pour ajuster les icônes */
+#contact::before {
+    content: ''; /* Icône pour contact */
+}
+#network::before {
+    content: ''; /* Icône pour réseau */
+}
+#lost-found::before {
+    content: ''; /* Icône pour Lost and Found */
+}
+#cargo::before {
+    content: ''; /* Icône pour suivi de cargaison */
+}
+.image-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image-slider-track-container {
+  overflow: hidden;
+   
+ 
+}
+
+.image-slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in;
+ 
+}
+
+.image-slide {
+  min-width: 50%;
+  margin: auto;
+ 
+}
+
+.image-slide img {
+  width: 99%;
+  display: block;
+  left: 30px;
+}
+
+.image-slider-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.left-btn {
+  left: 10px;
+}
+
+.right-btn {
+  right: 10px;
+}
+
+/* Styles pour la navigation en bas */
+.image-slider-nav {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.nav-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.active-dot {
+  background-color: #333;
+}
+
+.txt-actu{
+  font-size: 40px;
+  margin-left: 0%;
+}
+
+.text-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  gap: 20px; /* Espacement entre texte et image */
+}
+
+.text-content {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.image-content img {
+  max-width: 300px; /* Taille maximale de l'image */
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Optionnel: Ajouter une responsivité */
+@media (max-width: 768px) {
+  .text-image-container {
+      flex-direction: column; /* Empile le texte et l'image sur petits écrans */
+      text-align: center; /* Centre le texte sur petits écrans */
+  }
+
+  .image-content img {
+      max-width: 100%; /* L'image occupe toute la largeur de l'écran */
+  }
+}
+
+
+
+
+
+

@@ -21,6 +21,32 @@ Route::get('/services', function () {
     
     return view('services');
 });
+Route::get('/services-en-pistes', function () {
+    
+    return view('services-en-pistes');
+});
+Route::get('/services-bagages', function () {
+    
+    return view('services-bagages');
+});
+Route::get('/services-aux-passagers', function () {
+    
+    return view('services-aux-passagers');
+});
+Route::get('/services-cargo', function () {
+    
+    return view('services-cargo');
+});
+Route::get('/services-vip', function () {
+    
+    return view('services-vip');
+});
+
+
+
+
+ 
+
  
 
 

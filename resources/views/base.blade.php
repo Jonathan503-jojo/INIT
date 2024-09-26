@@ -7,6 +7,7 @@
    <!--=============== REMIXICONS ===============-->
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -63,34 +64,6 @@
                      </ul>
                   </li>
 
-                  <!--=============== DROPDOWN 3 - Rédirection ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        <a href="/redirection" class="lien">Rédirection</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-                     <ul class="dropdown__menu">
-                        <div class="propos">
-                           <h3>Rédirection</h3>
-                           <br>
-                           <p><a href="#"></a></p>
-                        </div>
-                     </ul>
-                  </li>
-
-                  <!--=============== DROPDOWN 4 - Partenaires ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        <a href="/partenaires" class="lien">Partenaires</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-                     <ul class="dropdown__menu">
-                        <div class="propos">
-                           <h3>Partenaires</h3>
-                           <br>
-                           <p><a href="#"></a></p>
-                        </div>
-                     </ul>
-                  </li>
-
                   <!--=============== DROPDOWN 5 - Contact ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
@@ -106,7 +79,7 @@
                   </li>
 
                   <!-- Lien direct - Careers -->
-                  <li><a href="/propos" class="nav__link">Cariere</a></li>
+                  <li><a href="/propos" class="nav__link">carrière</a></li>
                </ul>
             </div>
             <!-- Logo MGH -->
@@ -124,7 +97,16 @@
 
         @yield('content')
 
-        <footer>
+        <div class="floating-menu">
+         <div class="menu-item" id="contact">
+             <span class="icon">📩</span>
+             <span class="text">Contact us</span>
+         </div>
+          
+     </div>
+     
+     
+      <footer>
          <div class="footer">
              <div class="footer-content">
                  <h3>Contactez-nous</h3><br>
@@ -137,16 +119,13 @@
                   <ul class="list">
                      <li><a href="{{ url('/Acceuil')}}">Acceuil</a></li>
                      <li><a href="{{ url('/propos')}}">A propos</a></li>
-                     <li><a href="">Services</a></li>
-                     <li><a href="">Rediréction</a></li>
-                     <li><a href="">Carrières</a></li>
-                     <li><a href="">Contact</a></li>
+                     <li><a href="{{ url('/services')}}">Services</a></li>
+                     <li><a href="{{ url('/carrières')}}">Carrières</a></li>
                   </ul>
              </div>
              <div class="footer-content">
                  <h3>Suivez-nous</h3>
                  <ul class="social-icons">
-                  <li><a href=""><i class="fab fa-facebook"></i></a></li>
                   <li><a href=""><i class="fab fa-twitter"></i></a></li>
                   <li><a href=""><i class="fab fa-linkedin"></i></a></li>
                  </ul>
@@ -163,7 +142,3 @@
    </body>
    </html>
    
-
-
-
-

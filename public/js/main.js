@@ -218,4 +218,46 @@ document.querySelectorAll('.row2 img').forEach(image => {
     row2.style.animationPlayState = row2.style.animationPlayState === 'paused' ? 'running' : 'paused';
   });
 });
+const imageTrack = document.querySelector('.image-slider-track');
+const imageSlides = Array.from(imageTrack.children);
+const nextButton = document.querySelector('.right-btn');
+const prevButton = document.querySelector('.left-btn');
+const navDots = document.querySelectorAll('.nav-dot');
+const slideWidth = imageSlides[0].getBoundingClientRect().width;
+
+let currentImageSlideIndex = 0;
+
+// Mise à jour des points de navigation
+function updateNavDots() {
+  navDots.forEach(dot => dot.classList.remove('active-dot'));
+  const activeDotIndex = Math.floor(currentImageSlideIndex / 2); // Chaque point correspond à 2 images
+  navDots[activeDotIndex].classList.add('active-dot');
+}
+
+nextButton.addEventListener('click', () => {
+  if (currentImageSlideIndex < imageSlides.length - 2) {
+    currentImageSlideIndex += 2;
+    imageTrack.style.transform = `translateX(-${currentImageSlideIndex * slideWidth}px)`;
+    updateNavDots();
+  }
+});
+
+prevButton.addEventListener('click', () => {
+  if (currentImageSlideIndex > 0) {
+    currentImageSlideIndex -= 2;
+    imageTrack.style.transform = `translateX(-${currentImageSlideIndex * slideWidth}px)`;
+    updateNavDots();
+  }
+});
+
+// Événements sur les points de navigation
+navDots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentImageSlideIndex = index * 2;
+    imageTrack.style.transform = `translateX(-${currentImageSlideIndex * slideWidth}px)`;
+    updateNavDots();
+  });
+});
+
+
 

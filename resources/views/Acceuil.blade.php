@@ -7,6 +7,7 @@
    <!--=============== REMIXICONS ===============-->
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -63,34 +64,6 @@
                      </ul>
                   </li>
 
-                  <!--=============== DROPDOWN 3 - Rédirection ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        <a href="/redirection" class="lien">Rédirection</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-                     <ul class="dropdown__menu">
-                        <div class="propos">
-                           <h3>Rédirection</h3>
-                           <br>
-                           <p><a href="#"></a></p>
-                        </div>
-                     </ul>
-                  </li>
-
-                  <!--=============== DROPDOWN 4 - Partenaires ===============-->
-                  <li class="dropdown__item">
-                     <div class="nav__link">
-                        <a href="/partenaires" class="lien">Partenaires</a><i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                     </div>
-                     <ul class="dropdown__menu">
-                        <div class="propos">
-                           <h3>Partenaires</h3>
-                           <br>
-                           <p><a href="#"></a></p>
-                        </div>
-                     </ul>
-                  </li>
-
                   <!--=============== DROPDOWN 5 - Contact ===============-->
                   <li class="dropdown__item">
                      <div class="nav__link">
@@ -106,7 +79,7 @@
                   </li>
 
                   <!-- Lien direct - Careers -->
-                  <li><a href="/propos" class="nav__link">Cariere</a></li>
+                  <li><a href="/propos" class="nav__link">carrière</a></li>
                </ul>
             </div>
             <!-- Logo MGH -->
@@ -172,7 +145,7 @@
 
    <!--=============== SECTION MID ===============-->
    <div class="mid">
-      <h5>NOTRES SERVICES</h5>
+      <h5>NOS SERVICES</h5>
       <h1>SOUTENIR    L'AVIATION    NATIONALE</h1>
       <!--=============== CAROUSEL2 ===============-->
       <div id="custom-container">
@@ -181,52 +154,52 @@
              <div id="custom-slider">
                  <!-- Remplacer les éléments avec des images et du texte superposé -->
                  <div class="custom-slide">
-                     <img src="{{ asset('img/services/350 (2).jpg') }}" alt="Image 1" class="custom-image">
-                     <div class="custom-overlay">
-                         <h2>Les Services d'Assistance</h2>
-                         <p>Une équipe dédiée à votre vol</p>
-                         <a href="http://" class="learn-more">Voir plus</a> 
-                     </div>
-                 </div>
-                 <div class="custom-slide">
+                  <a href="/services-en-pistes" class="learn-more">
                      <img src="{{ asset('img/services/Ramp_handling.jpg') }}" alt="Image 2" class="custom-image">
                      <div class="custom-overlay">
-                         <h2>Les Services en Piste</h2>
-                         <p>Des équipes dynamiques</p>
-                         <a href="http://" class="learn-more">Voir plus</a>
+                        <h3>Les Services en Piste</h3>
+                        <p>Des équipes dynamiques</p>
                      </div>
-                 </div>
-                 <div class="custom-slide">
+                  </a>
+               </div>
+               <div class="custom-slide">
+                  <a href="/services-bagages" class="learn-more">
                   <img src="{{ asset('img/services/Service bagages.jpg') }}" alt="Image 1" class="custom-image">
                   <div class="custom-overlay">
-                      <h2>Les Services Bagages</h2>
+                      <h3>Les Services Bagages</h3>
                       <p>Des services aux normes</p>
-                      <a href="http://" class="learn-more">Voir plus</a>
                   </div>
+                  </a>
               </div>
               <div class="custom-slide">
+               <a href="/services-aux-passagers" class="learn-more">
                   <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 2" class="custom-image">
                   <div class="custom-overlay">
-                      <h2>Les Services aux Passagers</h2>
+                      <h3>Les Services aux Passagers</h3>
                       <p>Priorité des Clients</p>
-                      <a href="http://" class="learn-more">Voir plus</a>
+                       
                   </div>
+               </a>
               </div>
               <div class="custom-slide">
+               <a href="/services-cargo" class="learn-more">
                <img src="{{ asset('img/services/Services cargo.jpg') }}" alt="Image 1" class="custom-image">
                <div class="custom-overlay">
-                   <h2>TLes Services Cargo</h2>
+                   <h3>Les Services Cargo</h3>
                    <p>Livraison rapide</p>
-                   <a href="http://" class="learn-more">Voir plus</a>
+                    
                </div>
+               </a>
            </div>
            <div class="custom-slide">
+            <a href="/services-vip" class="learn-more">
                <img src="{{ asset('img/services/Services_VIP.jpg') }}" alt="Image 2" class="custom-image">
                <div class="custom-overlay">
-                   <h2>Les Services VIP</h2>
+                   <h3>Les Services VIP</h3>
                    <p>Nous pouvons vous représenter</p>
-                   <a href="http://" class="learn-more">Voir plus</a>
+                    
                </div>
+            </a>
            </div>
                  <!-- Vous pouvez continuer à ajouter d'autres diapositives ici -->
              </div>
@@ -240,8 +213,76 @@
       <h1>NAVIGUEZ DANS NOTRE NATION</h1><br><br>
       <div id="map" style="height: 700px;"></div>
    </div>
+
    <br><br>
- 
+   <div class="actu">
+      <h5>Actualités</h5>
+      <h1>RESTEZ À JOUR</h1><br><br>
+    
+      <div class="image-slider">
+        <div class="image-slider-track-container">
+          <ul class="image-slider-track">
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+            <li class="image-slide">
+               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
+               <div class="txt-actu">
+                  <h2>Vaovao</h2>
+                  <h4>Mbola tsy misy vaovao</h4>
+              </div>
+            </li>
+             
+          </ul>
+          </div>
+        <button class="image-slider-button left-btn">◀</button>
+        <button class="image-slider-button right-btn">▶</button>
+    
+        <!-- Pagination nav (boutons de navigation en bas) -->
+        <div class="image-slider-nav">
+          <span class="nav-dot active-dot"></span>
+          <span class="nav-dot"></span>
+          <span class="nav-dot"></span>
+        </div>
+      </div>
+    </div>
+    
+    
+   <br><br>
+
    <div class="partenaires">
       <h2>PARTENAIRES</h2>
       <div class="txt">
@@ -316,7 +357,16 @@
    </div>
    </div>
    </div>
-
+   
+   <div class="floating-menu">
+      <div class="menu-item" id="contact">
+          <span class="icon">📩</span>
+          <span class="text">Contact us</span>
+      </div>
+       
+  </div>
+  
+  
    <footer>
       <div class="footer">
           <div class="footer-content">
@@ -330,16 +380,13 @@
                <ul class="list">
                   <li><a href="{{ url('/Acceuil')}}">Acceuil</a></li>
                   <li><a href="{{ url('/propos')}}">A propos</a></li>
-                  <li><a href="">Services</a></li>
-                  <li><a href="">Rediréction</a></li>
-                  <li><a href="">Carrières</a></li>
-                  <li><a href="">Contact</a></li>
+                  <li><a href="{{ url('/services')}}">Services</a></li>
+                  <li><a href="{{ url('/carrières')}}">Carrières</a></li>
                </ul>
           </div>
           <div class="footer-content">
               <h3>Suivez-nous</h3>
               <ul class="social-icons">
-               <li><a href=""><i class="fab fa-facebook"></i></a></li>
                <li><a href=""><i class="fab fa-twitter"></i></a></li>
                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
               </ul>
