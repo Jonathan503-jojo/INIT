@@ -1112,40 +1112,98 @@ a:hover {
   font-size: 40px;
   margin-left: 0%;
 }
-.text-image-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  gap: 20px; /* Espacement entre texte et image */
+.text-image-container-1,
+.text-image-container-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 .text-content {
-  flex: 1 1 50%; /* Le texte occupe 50% de la largeur */
+    width: 50%;
+    padding: 20px;
 }
 
 .image-content {
-  flex: 1 1 50%; /* L'image occupe 50% de la largeur */
+    width: 50%;
+    padding: 20px;
 }
 
 .image-content img {
-  width: 100%; /* L'image occupe tout l'espace disponible */
-  height: auto; /* Garde les proportions de l'image */
-  object-fit: cover; /* Remplit bien le conteneur sans déformation */
-  max-height: 500px; /* Limite la hauteur maximale de l'image */
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-/* Responsivité : */
-@media (max-width: 768px) {
-  .text-image-container {
-      flex-direction: column;
-      text-align: center;
-  }
-
-  .image-content img {
-      max-width: 100%;
-      max-height: none; /* Supprime la limite de hauteur sur petits écrans */
-  }
+/* Conteneur 1: Image à droite, texte à gauche */
+.text-image-container-1 {
+    flex-direction: row;
 }
+
+/* Conteneur 2: Image à gauche, texte à droite */
+.text-image-container-2 {
+    flex-direction: row-reverse;
+}
+
+/* Styles pour la liste */
+.liste {
+    list-style-type: square;
+    font-size: 18px;
+}
+
+.text-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-content h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.liste {
+  list-style-type: none; /* Retirer le style par défaut */
+  padding-left: 0;
+}
+
+.liste li {
+  position: relative;
+  margin: 20px 0;
+  padding-left: 30px; /* Espace pour les grandes puces */
+  font-size: 18px; /* Taille du texte */
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.liste li::before {
+  content: ''; /* Ajout d'un carré */
+  position: absolute;
+  left: 0;
+  top: 7px; /* Ajuster la position verticale */
+  width: 12px; /* Taille du carré */
+  height: 12px;
+  background-color: #333; /* Couleur du carré */
+}
+
+.text-content h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #444;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+.text-content h1{
+  color: red;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+
 
 
 
