@@ -83,7 +83,9 @@
                </ul>
             </div>
             <!-- Logo MGH -->
-            <img src="img/logo MGH.jpg" class="image">
+            <a href="{{ url('/Acceuil')}}" class="logo-link">
+               <img src="img/logo MGH.jpg" alt="Logo MGH" class="image">
+             </a>             
          </nav>
       </header>
    </div>

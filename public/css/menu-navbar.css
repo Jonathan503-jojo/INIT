@@ -92,7 +92,6 @@ a {
   text-decoration: none;
 }
 
- 
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -171,19 +170,19 @@ a {
   opacity: 0;
 }
 
-.image {
+ .image {
   object-fit: contain; 
   top: 10px;
   right: 10px;
   height: auto;
-  max-width: 300px; /* Taille du logo initiale */
+  max-width: 130px; /* Taille du logo initiale */
   transition: all 0.3s ease;
 }
 
  /* Réduction de la taille du logo à mesure que la résolution diminue */
  @media screen and (max-width: 1200px) {
       .image {
-      max-width: 130px;
+      max-width: 100px;
       position: absolute;
   }
 }
@@ -1111,6 +1110,7 @@ a:hover {
 .txt-actu{
   font-size: 40px;
   margin-left: 0%;
+  font-family: 'Roboto', sans-serif;
 }
 .text-image-container-1,
 .text-image-container-2 {
@@ -1124,6 +1124,7 @@ a:hover {
 .text-content {
     width: 50%;
     padding: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .image-content {
@@ -1189,7 +1190,7 @@ a:hover {
   height: 12px;
   background-color: #333; /* Couleur du carré */
 }
-
+  
 .text-content h2 {
   font-size: 50px;
   font-weight: 700;
@@ -1203,7 +1204,74 @@ a:hover {
   font-family: 'Roboto', sans-serif;
 }
 
+.text-content p{
+  font-size: 20px;
+  font-weight: 200;
+  color: black;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+}
+/* Breakpoints pour l'adaptation responsive */
 
+/* Écrans moyens (tablettes) */
+@media screen and (max-width: 992px) {
+  .text-content, .image-content {
+      width: 100%;
+      padding: 10px;
+  }
+  .text-image-container-1,
+  .text-image-container-2 {
+      flex-direction: column;
+      align-items: center;
+  }
+  .text-content h2 {
+      font-size: 40px;
+  }
+  .text-content h1 {
+      font-size: 24px;
+  }
+  .text-content p {
+      font-size: 18px;
+  }
+  .liste li {
+      font-size: 16px;
+  }
+}
+
+/* Écrans petits (smartphones) */
+@media screen and (max-width: 768px) {
+  .text-content, .image-content {
+      padding: 5px;
+  }
+  .text-content h2 {
+      font-size: 32px;
+  }
+  .text-content h1 {
+      font-size: 18px;
+  }
+  .text-content p {
+      font-size: 16px;
+  }
+  .liste li {
+      font-size: 14px;
+  }
+}
+
+/* Très petits écrans (petits smartphones) */
+@media screen and (max-width: 576px) {
+  .text-content h2 {
+      font-size: 28px;
+  }
+  .text-content h1 {
+      font-size: 16px;
+  }
+  .text-content p {
+      font-size: 14px;
+  }
+  .liste li {
+      font-size: 12px;
+  }
+}
 
 
 

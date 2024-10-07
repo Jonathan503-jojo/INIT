@@ -8,6 +8,7 @@
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+   <link rel="icon" href="img/logo MGH.jpg" type="image/jpg">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
@@ -83,7 +84,9 @@
                </ul>
             </div>
             <!-- Logo MGH -->
-            <img src="img/logo MGH.jpg" class="image">
+            <a href="/Acceuil" class="logo-link">
+               <img src="img/logo MGH.jpg" alt="Logo MGH" class="image">
+             </a>             
          </nav>
       </header>
    </div>
@@ -225,44 +228,44 @@
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
 
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
             <li class="image-slide">
                <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
                <div class="txt-actu">
-                  <h2>Vaovao</h2>
-                  <h4>Mbola tsy misy vaovao</h4>
+                  <h2>Actualités</h2>
+                  <h4>##</h4>
               </div>
             </li>
              
