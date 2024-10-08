@@ -5,11 +5,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
    <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-   <link rel="icon" href="img/logo MGH.jpg" type="image/jpg">
-   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+   <link rel="icon" href="img/logo&#32;MGH.jpg" type="image/jpg">
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
    <!--=============== CSS ===============-->
@@ -46,8 +46,17 @@
                         <div class="propos">
                            <h3>A propos</h3>
                            <br>
-                           <p><a href="#"></a></p>
-                        </div>
+                           <p>Madagascar Ground Handling est fière de vous fournir les services d'assistance au sol en accord avec les normes IATA.
+                              Créée en 2016, nous sommes fiers de faire partie du patrimoine de Madagascar. Nos prestations s'étendent sur les principales villes de Madagascar.
+                              Appartenir à Madagascar Ground Handling (MGH), c’est appartenir à une Société vitrine de Madagascar. Notre vision est de gagner la fidélité par la passion et l’innovation.
+                              Première image aux portes de Madagascar par voie aérienne, la famille MGH réunit des personnes de caractère et dédiés au service du Client.
+                              Cette philosophie est ancrée dans nos 4 valeurs principales : INTEGRITÉ, ESPRIT D'EQUIPE, POLYVALENCE et DYNAMISME.
+                              Notre Intégrité fait la différence dans notre secteur d'activité. Rejoignez-nous et prenez part à cette différence.
+                              La force de la compagnie s'appuie sur son anticipation ainsi que sur la réactivité du personnel face aux besoins particuliers de chacun de ses clients.
+                              Des formations sont dispensées à intervalles réguliers afin de maintenir la qualification du personnel de la</p>
+                              <br>
+                              <button class="voir-plus">Voir plus</button>
+                           </div>
                      </ul>
                   </li>
 
@@ -387,14 +396,16 @@
                   <li><a href="{{ url('/carrières')}}">Carrières</a></li>
                </ul>
           </div>
-          <div class="footer-content">
-              <h3>Suivez-nous</h3>
-              <ul class="social-icons">
-               <li><a href=""><i class="fab fa-twitter"></i></a></li>
-               <li><a href=""><i class="fab fa-linkedin"></i></a></li>
-              </ul>
-              </div>
-      </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+         </div>
+          </div>
       <div class="bottom-bar">
           <p>&copy; 2024 votre entreprise . Tous droits réservés</p>
       </div>
