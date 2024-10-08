@@ -1333,6 +1333,27 @@ h3 {
   cursor: pointer;
 }
 
+.little-title{
+  overflow: hidden;
+  height: 600px;
+  align-content: center;
+}
+
+.little-title h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 50px;
+    margin: auto;
+    
+}
+.pic-title{
+  background-color: #007bff;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  object-fit: cover;
+}
+
+
 
 
 

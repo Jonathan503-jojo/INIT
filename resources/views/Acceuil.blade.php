@@ -3,13 +3,14 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!--=============== REMIXICONS ===============-->
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-   <link rel="icon" href="img/logo&#32;MGH.jpg" type="image/jpg">
+   <link rel="icon" href="img/logo MGH.jpg" type="image/jpg">
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
    <!--=============== CSS ===============-->
@@ -397,7 +398,7 @@
                </ul>
           </div>
           <div class="footer-col">
-            <h4>follow us</h4>
+            <h3>suivez-nous</h3>
             <div class="social-links">
                <a href="#"><i class="fab fa-facebook-f"></i></a>
                <a href="#"><i class="fab fa-twitter"></i></a>
@@ -405,6 +406,7 @@
                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
          </div>
+         
           </div>
       <div class="bottom-bar">
           <p>&copy; 2024 votre entreprise . Tous droits réservés</p>

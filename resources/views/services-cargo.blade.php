@@ -1,6 +1,12 @@
 @extends('base')
 
 @Section('content')
+<div class="little-title">
+    <center><h2>LES SERVICES CARGO</h2></center>
+    <br><br><br><br><br>
+    <img src="{{ asset('img/aeroport-de-paris.jpg') }}" alt="Image 1" class="pic-title" >
+</div>
+
 <div class="text-image-container-1">
     <!-- Texte à gauche -->
     <div class="text-content">
