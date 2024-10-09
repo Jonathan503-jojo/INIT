@@ -42,6 +42,15 @@ Route::get('/services-vip', function () {
     return view('services-vip');
 });
 
+Route::get('/login', function () {
+    
+    return view('login');
+});
+
+Route::get('/test', function () {
+    
+    return view('andrana');
+});
 
 
 
