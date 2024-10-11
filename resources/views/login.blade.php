@@ -13,7 +13,7 @@
     </div>
     <div class="container">
         <h1>Log In</h1>
-        <form action="">
+        <form action="" method="POST">
             <div class="input">
                 <i class="fa-solid fa-user"></i>
                 <input type="text" placeholder="Entrer votre nom" name="name">
@@ -25,8 +25,19 @@
             </div>
 
             <button type="submit" name="login">Log In</button><br>
+            <button type="submit" name="signin">Sign In</button><br>
             
         </form>
     </div>
 </body>
 </html>
+<?php 
+    if(isset($_POST['login'])){
+        header("Location: /login");
+    }
+
+    if(isset($_POST['signin'])){
+        header("Location: /propos");
+    }
+
+?>

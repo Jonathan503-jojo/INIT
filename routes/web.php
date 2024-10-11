@@ -1,59 +1,22 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\mycontroller;
+use App\Http\Controllers\HomeController;
 
-Route::get('/welcome', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Acceuil', function () {
-    
-    return view('Acceuil');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/adminpage',[ HomeController::class,'page'])->middleware('admin');
 
-Route::get('/propos', function () {
-    
-    return view('propos');
-});
-
-Route::get('/services', function () {
-    
-    return view('services');
-});
-Route::get('/services-en-pistes', function () {
-    
-    return view('services-en-pistes');
-});
-Route::get('/services-bagages', function () {
-    
-    return view('services-bagages');
-});
-Route::get('/services-aux-passagers', function () {
-    
-    return view('services-aux-passagers');
-});
-Route::get('/services-cargo', function () {
-    
-    return view('services-cargo');
-});
-Route::get('/services-vip', function () {
-    
-    return view('services-vip');
-});
-
-Route::get('/login', function () {
-    
-    return view('login');
-});
-
- 
-
-
-
- 
-
- 
-
-
- 
+require __DIR__.'/auth.php';

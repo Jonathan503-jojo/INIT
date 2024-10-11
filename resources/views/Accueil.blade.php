@@ -90,7 +90,7 @@
                   </li>
 
                   <!-- Lien direct - Careers -->
-                  <li><a href="/propos" class="nav__link">carrière</a></li>
+                  <li><a href="/carrière" class="nav__link">carrière</a></li>
                </ul>
             </div>
             <!-- Logo MGH -->
@@ -391,7 +391,7 @@
           <div class="footer-content">
               <h3>Liens rapides</h3>
                <ul class="list">
-                  <li><a href="{{ url('/Acceuil')}}">Acceuil</a></li>
+                  <li><a href="{{ url('/Accueil')}}">Accueil</a></li>
                   <li><a href="{{ url('/propos')}}">A propos</a></li>
                   <li><a href="{{ url('/services')}}">Services</a></li>
                   <li><a href="{{ url('/carrières')}}">Carrières</a></li>
