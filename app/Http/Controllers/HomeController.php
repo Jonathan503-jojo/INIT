@@ -1,13 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\User;
 
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function page(){
+    public function index(){
+
+        return view('adminpage');
+    }
+
+    public function user()
+    {
+        // Récupère tous les utilisateurs
+        $users = User::all();
         
-            return view('adminpage');
+        // Passe les utilisateurs à la vue
+        return view('user', ['users' => $users]);
+    }
+
+    public function news(){
+
+        return view('news');
     }
 }
+ 

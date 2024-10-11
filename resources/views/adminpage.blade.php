@@ -1,12 +1,19 @@
+<!-- resources/views/admin/dashboard.blade.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 <body>
-    <h1>ONLY ADMIN HAVE ACCES</h1>
+    <div class="admin-container">
+        <h1>Bienvenue sur le tableau de bord Admin</h1>
+        <div class="menu">
+            <a href="{{ route('adminpage.user') }}" class="menu-item">Gestion des Utilisateurs</a>
+            <a href="{{ route('adminpage.news') }}" class="menu-item">Gestion des News</a>
+        </div>
+    </div>
 </body>
 </html>
