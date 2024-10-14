@@ -15,5 +15,6 @@
             <a href="{{ route('adminpage.news') }}" class="menu-item">Gestion des News</a>
         </div>
     </div>
+    <center><a href="{{ route('dashboard') }}" class="menu-item">Dashboard</a></center>
 </body>
 </html>

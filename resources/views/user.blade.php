@@ -18,7 +18,7 @@
                     <th>Email</th>
                     <th>Date de Création</th>
                     <th>Date de Dernière Mise à Jour</th>
-                    <th>Dernière Connexion</th> <!-- Nouvelle colonne -->
+                    <th>Dernière Connexion</th> <!-- Colonne pour afficher la dernière connexion -->
                 </tr>
             </thead>
             <tbody>
@@ -27,13 +27,14 @@
                     <td>{{ $user->id }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
-                    <td>{{ $user->created_at }}</td>
-                    <td>{{ $user->updated_at }}</td>
+                    <td>{{ $user->created_at->format('d/m/Y H:i') }}</td>
+                    <td>{{ $user->updated_at->format('d/m/Y H:i') }}</td>
                     <td>{{ $user->last_login ? $user->last_login->format('d/m/Y H:i') : 'Jamais' }}</td> <!-- Affiche 'Jamais' si l'utilisateur ne s'est jamais connecté -->
                 </tr>
                 @endforeach
             </tbody>
         </table>
+        
         <a href="{{ route('adminpage') }}" class="back-button">Retour au Dashboard</a>
     </div>
 </body>
