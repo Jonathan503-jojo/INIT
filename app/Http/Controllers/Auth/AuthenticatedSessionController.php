@@ -24,18 +24,25 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request): RedirectResponse
     {
+        // Authentification de l'utilisateur
         $request->authenticate();
 
+        // Régénérer la session pour éviter les attaques CSRF
         $request->session()->regenerate();
+
+        // Vérifier le type d'utilisateur et rediriger en conséquence
         if (Auth::user()->usertype == 'admin') {
-
-            return redirect()->intended(route('adminpage', absolute: false));
+            // Redirection vers la page admin
+            return redirect()->intended(route('adminpage'));
         }
+
         if (Auth::user()->usertype == 'user') {
-
-            return redirect()->intended(route('welcome', absolute: false));
+            // Redirection vers la page d'accueil utilisateur
+            return redirect()->intended(route('welcome'));
         }
-         
+
+        // Optionnel : Rediriger vers une page par défaut si le type n'est pas défini
+        return redirect('/');
     }
 
     /**
@@ -43,12 +50,16 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
+        // Déconnexion de l'utilisateur
         Auth::guard('web')->logout();
 
+        // Invalidation de la session
         $request->session()->invalidate();
 
+        // Régénérer le token CSRF
         $request->session()->regenerateToken();
 
+        // Redirection vers la page d'accueil après déconnexion
         return redirect('/');
     }
 }
