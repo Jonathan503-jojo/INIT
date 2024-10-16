@@ -6,6 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!--=============== REMIXICONS ===============-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
    <link href="{{ url('https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css')}}" rel="stylesheet">
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
@@ -242,6 +243,7 @@
                           <h2>{{ $article->title }}</h2>
                           <!-- Sous-titre -->
                           <h4>{{ $article->subtitle }}</h4>
+                          <a href="" >voir plus</a>
                       </div>
                   </li>
                   @endforeach
@@ -259,11 +261,9 @@
       </div>
   </div>
   
-    
-   <div class="login-page">
-      <center><a  href="{{ url('login')}}"> CLIQUER ICI POUR LE LOGIN</a></center>
-
-   </div>
+   
+   <br><br>
+   <br><br>
    <br><br>
 
    <div class="partenaires">
@@ -382,6 +382,11 @@
           <p>&copy; 2024 votre entreprise . Tous droits réservés</p>
       </div>
   </footer>  
+  <div class="login-page">
+   <center><a  href="{{ url('login')}}"><i class="fas fa-user"></i> SE CONNECTER</a></center>
+
+</div>
+
   <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
    <!--=============== JS MAIN ===============-->
    <script src="{{ url('js/main.js')}}"></script>
