@@ -10,6 +10,11 @@ use App\Http\Controllers\NewsController;
 Route::get('/', function () {
     return view('accueil');
 });
+
+Route::get('/homenews', function () {
+    return view('home-news');
+});
+ 
  
  
 Route::get('/dashboard', function () {
@@ -34,7 +39,13 @@ require __DIR__.'/auth.php';
 
 Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
 Route::post('/news', [NewsController::class, 'store'])->name('news.store');
-Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
+//Route::get('/adminpage/news/{news}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/adminpage/news/', [NewsController::class, 'index'])->name('news.show');
+
+Route::get('/', [HomeController::class, 'showActualites'])->name('Accueil');
+
+
+
 
 
  

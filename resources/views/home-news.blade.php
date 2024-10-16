@@ -20,29 +20,31 @@
                     <th>ID</th>
                     <th>Titre</th>
                     <th>Sous-titre</th>
+                    <th>contenu</th>
                     <th>Date de Création</th>
                     <th>Date de Dernière Mise à Jour</th>
                     <th>Actions</th> <!-- Colonne pour les actions -->
                 </tr>
             </thead>
             <tbody>
-                   
+                @foreach($news as $article)
                 <tr>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
+                    <td>{{ $article->id }}</td>
+                    <td>{{ $article->title }}</td>
+                    <td>{{ $article->subtitle }}</td>
+                    <td>{{ $article->body }}</td>
+                    <td>{{ $article->created_at->format('d/m/Y H:i') }}</td>
+                    <td>{{ $article->updated_at->format('d/m/Y H:i') }}</td>
                     <td>
                         <!-- Boutons pour modifier et supprimer -->
-                        <a href="" class="btn-edit">Modifier</a>
-                        <form action="" method="POST" class="btn-delete-form">
+                        <a href=" " class="btn-edit">Modifier</a>
+                        <form action=" " method="POST" class="btn-delete-form">
                             @csrf
                             <button type="submit" class="btn-delete">Supprimer</button>
                         </form>
                     </td>
                 </tr>
-                
+                @endforeach
             </tbody>
         </table>
         

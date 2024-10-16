@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="admin-container">
-        <h1>Gestion des News</h1>
+        <h1>Ajout des News</h1>
         <form action="{{ route('news.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div>

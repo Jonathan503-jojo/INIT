@@ -227,71 +227,38 @@
       <div id="map" style="height: 700px;"></div>
    </div>
 
-   <br><br>
    <div class="actu">
       <h5>Actualités</h5>
       <h1>RESTEZ À JOUR</h1><br><br>
-    
+  
       <div class="image-slider">
-        <div class="image-slider-track-container">
-          <ul class="image-slider-track">
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-            <li class="image-slide">
-               <img src="{{ asset('img/services/Service passagers.jpg') }}" alt="Image 5">
-               <div class="txt-actu">
-                  <h2>Actualités</h2>
-                  <h4>##</h4>
-              </div>
-            </li>
-             
-          </ul>
+          <div class="image-slider-track-container">
+              <ul class="image-slider-track">
+                  @foreach($news as $article)
+                  <li class="image-slide">
+                     <img src="{{ asset($article->image) }}" alt="Image {{ $article->title }}">
+                      <div class="txt-actu">
+                          <!-- Titre -->
+                          <h2>{{ $article->title }}</h2>
+                          <!-- Sous-titre -->
+                          <h4>{{ $article->subtitle }}</h4>
+                      </div>
+                  </li>
+                  @endforeach
+              </ul>
           </div>
-        <button class="image-slider-button left-btn">◀</button>
-        <button class="image-slider-button right-btn">▶</button>
-    
-        <!-- Pagination nav (boutons de navigation en bas) -->
-        <div class="image-slider-nav">
-          <span class="nav-dot active-dot"></span>
-          <span class="nav-dot"></span>
-          <span class="nav-dot"></span>
-        </div>
+          <button class="image-slider-button left-btn">◀</button>
+          <button class="image-slider-button right-btn">▶</button>
+  
+          <!-- Pagination nav (boutons de navigation en bas) -->
+          <div class="image-slider-nav">
+              @foreach($news as $index => $article)
+              <span class="nav-dot @if($index == 0) active-dot @endif"></span>
+              @endforeach
+          </div>
       </div>
-    </div>
+  </div>
+  
     
    <div class="login-page">
       <center><a  href="{{ url('login')}}"> CLIQUER ICI POUR LE LOGIN</a></center>

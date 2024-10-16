@@ -12,7 +12,7 @@
         <h1>Bienvenue sur le tableau de bord Admin</h1>
         <div class="menu">
             <a href="{{ route('adminpage.user') }}" class="menu-item">Gestion des Utilisateurs</a>
-            <a href="{{ route('adminpage.news') }}" class="menu-item">Gestion des News</a>
+            <a href="{{ route('news.show') }}" class="menu-item">Gestion des News</a>
         </div>
     </div>
     <center><a href="{{ route('dashboard') }}" class="menu-item">Dashboard</a></center>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\User;
+use App\Models\News;
 
 use Illuminate\Http\Request;
 
@@ -30,5 +31,11 @@ class HomeController extends Controller
 
         return view('add-news');
     }
+
+    public function showActualites()
+{
+    $news = News::all(); // Récupérer toutes les actualités de la base de données
+    return view('Accueil', compact('news')); // Passer les données à la vue
+}
 }
  
