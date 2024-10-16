@@ -30,6 +30,9 @@ class AuthenticatedSessionController extends Controller
         // Régénérer la session pour éviter les attaques CSRF
         $request->session()->regenerate();
 
+        // Auth::user()->last_login = now();
+        // Auth::user()->save();
+        
         // Vérifier le type d'utilisateur et rediriger en conséquence
         if (Auth::user()->usertype == 'admin') {
             // Redirection vers la page admin
@@ -63,3 +66,4 @@ class AuthenticatedSessionController extends Controller
         return redirect('/');
     }
 }
+

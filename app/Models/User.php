@@ -42,6 +42,13 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'last_login' => 'datetime',
         ];
+    }
+
+    public function updateLastLoginAt()
+    {
+        $this->last_login = now();
+        $this->saveQuietly();
     }
 }

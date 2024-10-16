@@ -293,7 +293,10 @@
       </div>
     </div>
     
-    
+   <div class="login-page">
+      <center><a  href="{{ url('login')}}"> CLIQUER ICI POUR LE LOGIN</a></center>
+
+   </div>
    <br><br>
 
    <div class="partenaires">

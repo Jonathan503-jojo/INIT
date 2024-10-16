@@ -10,6 +10,10 @@
 <body>
     <div class="admin-container">
         <h1>Liste des Utilisateurs</h1>
+        
+        <!-- Bouton pour ajouter un nouvel utilisateur -->
+        <a href=" " class="btn-create">Ajouter Utilisateur</a>
+        
         <table>
             <thead>
                 <tr>
@@ -18,7 +22,8 @@
                     <th>Email</th>
                     <th>Date de Création</th>
                     <th>Date de Dernière Mise à Jour</th>
-                    <th>Dernière Connexion</th> <!-- Colonne pour afficher la dernière connexion -->
+                    <th>Dernière Connexion</th>
+                    <th>Actions</th> <!-- Nouvelle colonne pour les actions -->
                 </tr>
             </thead>
             <tbody>
@@ -29,7 +34,21 @@
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->created_at->format('d/m/Y H:i') }}</td>
                     <td>{{ $user->updated_at->format('d/m/Y H:i') }}</td>
-                    <td>{{ $user->last_login ? $user->last_login->format('d/m/Y H:i') : 'Jamais' }}</td> <!-- Affiche 'Jamais' si l'utilisateur ne s'est jamais connecté -->
+                    <td>
+                        @if($user->last_login)
+                            {{ $user->last_login->format('d/m/Y H:i') }}
+                        @else
+                            {{ __('Jamais') }}
+                        @endif
+                    </td>
+                    <td>
+                        <!-- Boutons pour modifier et supprimer -->
+                        <a href=" " class="btn-edit">Modifier</a>
+                        <form action=" " method="POST" class="btn-delete-form">
+                            @csrf
+                            <button type="submit" class="btn-delete">Supprimer</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

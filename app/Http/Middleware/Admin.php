@@ -16,13 +16,12 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::user()->usertype == 'admin') {
-
-            return $next($request);
+        // Vérifier si l'utilisateur est connecté
+        if (Auth::check() && Auth::user()->usertype == 'admin') {
+            return $next($request);  // Si l'utilisateur est admin, continuer
         }
 
-        abort(401);
-
-        
+        // Si l'utilisateur n'est pas connecté ou n'est pas admin
+        abort(401, 'Non autorisé');  // Erreur 401 : accès non autorisé
     }
 }

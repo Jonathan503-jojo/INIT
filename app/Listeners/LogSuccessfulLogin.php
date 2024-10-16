@@ -15,11 +15,10 @@ class LogSuccessfulLogin
     /**
      * Handle the event.
      */
-    public function handle(object $event) 
+    public function handle(Login $event) 
     {
         // Met à jour la colonne last_login avec l'heure actuelle
-        $event->user->last_login = now();
-        $event->user->save();
+        $event->user->updateLastLoginAt();
         
     }
 }

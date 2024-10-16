@@ -21,9 +21,14 @@ class HomeController extends Controller
         return view('user', ['users' => $users]);
     }
 
-    public function news(){
+    public function homenews(){
 
-        return view('news');
+        return view('home-news');
+    }
+
+    public function addnews(){
+
+        return view('add-news');
     }
 }
  
