@@ -94,7 +94,7 @@
                </ul>
             </div>
             <!-- Logo MGH -->
-            <a href="/Acceuil" class="logo-link">
+            <a href="/" class="logo-link">
                <img src="img/logo MGH.jpg" alt="Logo MGH" class="image">
              </a>             
          </nav>
@@ -130,7 +130,7 @@
              <div class="footer-content">
                  <h3>Liens rapides</h3>
                   <ul class="list">
-                     <li><a href="{{ url('/Accueil')}}">Accueil</a></li>
+                     <li><a href="{{ url('/')}}">Accueil</a></li>
                      <li><a href="{{ url('/propos')}}">A propos</a></li>
                      <li><a href="{{ url('/services')}}">Services</a></li>
                      <li><a href="{{ url('/carrières')}}">Carrières</a></li>

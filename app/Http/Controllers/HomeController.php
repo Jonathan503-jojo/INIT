@@ -12,7 +12,7 @@ class HomeController extends Controller
 
         return view('adminpage');
     }
-
+  
     public function user()
     {
         // Récupère tous les utilisateurs
@@ -34,8 +34,10 @@ class HomeController extends Controller
 
     public function showActualites()
 {
-    $news = News::all(); // Récupérer toutes les actualités de la base de données
-    return view('Accueil', compact('news')); // Passer les données à la vue
+    // On récupère uniquement les news qui sont publiées
+    $news = News::where('published', true)->get();
+
+    return view('Accueil', compact('news'));
 }
 }
  

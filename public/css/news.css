@@ -135,16 +135,7 @@ button:hover {
     text-align: center;
 }
 
-.btn-edit {
-    display: inline-block;
-    padding: 10px 15px;
-    color: white;
-    background-color: #ffc107;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    text-align: center;
-}
+
 
 .btn-delete {
     display: inline-block;
@@ -214,4 +205,79 @@ tbody tr:nth-child(even) {
 .back-button:hover {
     opacity: 0.8;
 }
+.date-input-container {
+    margin-bottom: 20px; /* Espacement en bas pour séparer des autres éléments */
+    display: flex; /* Utiliser Flexbox pour centrer le contenu */
+    flex-direction: column; /* Aligner les éléments en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+}
+
+.date-input-container label {
+    margin-bottom: 5px; /* Espacement entre le label et le champ */
+    font-weight: bold; /* Mettre le label en gras */
+    color: #333; /* Couleur du texte */
+}
+
+.date-picker-wrapper {
+    position: relative; /* Position relative pour le placement de l'icône */
+    width: 100%; /* Assurez-vous que le wrapper utilise toute la largeur disponible */
+    max-width: 300px; /* Limiter la largeur maximale du champ de date */
+}
+
+.date-picker-wrapper input[type="date"] {
+    width: 100%; /* Utilise la largeur complète de l'élément parent */
+    padding: 10px 40px 10px 10px; /* Espacement interne, en ajoutant un espace à gauche pour l'icône */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    transition: border-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.date-picker-wrapper input[type="date"]:focus {
+    border-color: #007BFF; /* Couleur de bordure lorsqu'il est actif */
+    outline: none; /* Retire le contour par défaut */
+}
+
+.calendar-icon {
+    position: absolute; /* Position absolue pour placer l'icône */
+    right: 10px; /* Espacement à droite */
+    top: 50%; /* Centrer verticalement */
+    transform: translateY(-50%); /* Ajuste la position pour centrer parfaitement */
+    font-size: 20px; /* Taille de l'icône */
+    pointer-events: none; /* L'icône ne bloque pas les événements de clic */
+    color: #007BFF; /* Couleur de l'icône */
+    transition: color 0.3s; /* Transition de couleur */
+}
+
+.date-picker-wrapper input[type="date"]:hover + .calendar-icon,
+.date-picker-wrapper input[type="date"]:focus + .calendar-icon {
+    color: #0056b3; /* Changement de couleur au survol ou au focus */
+}
+
+
+.news-detail-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.news-images img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3490dc;
+}
+
+
 

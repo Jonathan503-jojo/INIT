@@ -12,7 +12,7 @@ body {
 }
 
 .admin-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 50px auto;
     background: #fff;
     padding: 20px;
@@ -112,21 +112,39 @@ tbody tr:nth-child(even) {
     display: inline-block;
     padding: 10px 15px;
     color: white;
-    background-color: #07c5ff;
-    font-weight: 500;
+    background-color: #ffc107;
     text-decoration: none;
     border-radius: 5px;
     margin-right: 10px;
     text-align: center;
-    transition: 0.5s;
 }
 
-.btn-delete {
+.btn-publish {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    padding: 10px 15px;
+    color: white;
+    background-color: #0493be;
+    font-weight: 900;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn-published{
+    font-family: 'Roboto', sans-serif;
+     
+}
+
+.btn-hide {
+    font-family: 'Roboto', sans-serif;
     display: inline-block;
     padding: 10px 15px;
     color: white;
     background-color: #dc3535;
-    font-weight: 500;
+    font-weight: 900;
     text-decoration: none;
     border-radius: 5px;
     border: none;
@@ -135,9 +153,8 @@ tbody tr:nth-child(even) {
     transition: 0.5s;
 }
 
-.btn-create:hover, .btn-edit:hover, .btn-delete:hover {
-    letter-spacing: 0.5px;
-    opacity: 0.8;
+.btn-publish:hover, .btn-hide:hover, .btn-delete:hover {
+    letter-spacing: 2px;
 }
 
 /* Pour le formulaire de suppression (si besoin d'un style spécifique) */

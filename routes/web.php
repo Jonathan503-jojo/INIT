@@ -16,6 +16,31 @@ Route::get('/homenews', function () {
 });
  
  
+Route::get('/services-en-pistes', function () {
+    return view('services-en-pistes');
+});
+ 
+
+Route::get('/services-bagages', function () {
+    return view('services-bagages');
+});
+
+
+Route::get('/services-aux-passagers', function () {
+    return view('services-aux-passagers');
+});
+
+
+Route::get('/services-cargo', function () {
+    return view('services-cargo');
+});
+
+
+Route::get('/services-vip', function () {
+    return view('services-vip');
+});
+ 
+
  
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -35,6 +60,7 @@ Route::get('/adminpage/news', [HomeController::class, 'homenews'])->name('adminp
 Route::get('/adminpage/news/create', [HomeController::class, 'addnews'])->name('adminpage.add-news')->middleware('admin');
 
 
+
 require __DIR__.'/auth.php';
 
 Route::get('/news/create', [NewsController::class, 'create'])->name('news.create');
@@ -43,6 +69,19 @@ Route::post('/news', [NewsController::class, 'store'])->name('news.store');
 Route::get('/adminpage/news/', [NewsController::class, 'index'])->name('news.show');
 
 Route::get('/', [HomeController::class, 'showActualites'])->name('Accueil');
+
+Route::post('/news/publish/{id}', [NewsController::class, 'publish'])->name('news.publish');
+Route::post('/news/unpublish/{id}', [NewsController::class, 'unpublish'])->name('news.unpublish');
+
+
+// Route pour afficher le formulaire d'édition d'une news
+Route::get('/admin/news/edit/{id}', [NewsController::class, 'edit'])->name('adminpage.edit-news');
+
+// Route pour traiter la mise à jour d'une news
+Route::put('/admin/news/update/{id}', [NewsController::class, 'update'])->name('adminpage.update-news');
+
+Route::get('/news/{id}', [NewsController::class, 'voirPlusNews'])->name('voir-plus-news');
+
 
 
 

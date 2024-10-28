@@ -1,4 +1,4 @@
-<!-- resources/views/news.blade.php -->
+ 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,14 +22,25 @@
                 <label for="subtitle">Subtitle:</label>
                 <input type="text" id="subtitle" name="subtitle">
             </div>
+
+            <!-- Nouveau champ pour la date de publication -->
+            <div class="date-input-container">
+                <label for="date">Date:</label>
+                <div class="date-picker-wrapper">
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+                        
+
             <div>
                 <label for="body">Body:</label>
                 <textarea id="body" name="body" required></textarea>
             </div>
             <div>
-                <label for="image">Image:</label>
-                <input type="file" id="image" name="image">
+                <label for="images">Images:</label>
+                <input type="file" id="images" name="images[]" multiple>
             </div>
+            
             <button type="submit">Add News</button>
         </form>
         
